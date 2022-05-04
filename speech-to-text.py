@@ -6,6 +6,9 @@ Created on Mon May  2 10:51:50 2022
 
  The followng program will convert an audo to text.
  
+     pip install pipwin
+     pipwin install pyaudio
+ 
  
 """
 
