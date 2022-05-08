@@ -8,7 +8,8 @@ Created on Mon May  2 10:51:50 2022
  
      pip install pipwin
      pipwin install pyaudio
- 
+     pip install SpeechRecognition
+     pip install pyttsx3
  
 """
 
