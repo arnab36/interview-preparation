@@ -96,6 +96,7 @@ y_pred = model.predict(x)
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
 plt.scatter(x, y, color ='b')
 plt.plot(x, y_pred, color ='k')
 plt.show()
