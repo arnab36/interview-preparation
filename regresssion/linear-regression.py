@@ -127,7 +127,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import mean_squared_error
 
-filePath = "Dataset/"
+filePath = "../Dataset/"
 df = pd.read_csv(filePath+'Fish.csv')
 
 species = df.Weight.unique()
