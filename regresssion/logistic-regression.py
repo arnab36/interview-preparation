@@ -19,7 +19,7 @@ from sklearn.linear_model import LogisticRegression
 
 
 
-filePath = "Dataset/"
+filePath = "../Dataset/"
 df = pd.read_csv(filePath+'framingham.csv')
 
 cols = list(df)
