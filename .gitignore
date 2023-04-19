@@ -2,3 +2,5 @@ moviedataset/*
 */result/*
 */savedModels/*
 NN/savedModels/*
+savedModels/*
+result/*

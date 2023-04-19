@@ -135,16 +135,16 @@ model = create_model(vocabulary_size+1,seq_len)
 
 model.fit(X,y,batch_size=128, epochs=100, verbose=1)
 
-model.save('savedModels/rnn-text-gen-100.h5')
+model.save('../../savedModels/rnn-text-gen-100.h5')
 
-dump(tokenizer, open('savedModels/my_simpletokenizer','wb'))
+dump(tokenizer, open('../../savedModels/my_simpletokenizer','wb'))
 
 #%%
 
 # Load moel, tokenizer and predict/generate the text
 
-model = load_model('savedModels/rnn-text-gen-100.h5')
-tokenizer = load(open('savedModels/my_simpletokenizer','rb'))
+model = load_model('../../savedModels/rnn-text-gen-100.h5')
+tokenizer = load(open('../../savedModels/my_simpletokenizer','rb'))
 #%%
 # seed_text = 'for now he will rest at home in Kanchrapara. Then you can return to normal activities if the doctors advise. Mukul was admitted to the'
 # op = generate_text(model,tokenizer, 25, seed_text, 10) 
