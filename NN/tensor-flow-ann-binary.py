@@ -38,7 +38,7 @@ modelName = "savedModels/model-ann-wine-quality.h5"
 
 def prepare_data_churn_model():  
     
-    path = "C:/Users/ArnabBiswas/Documents/Python ML/Kaggle Dataset/classification-data/"
+    path = "C:/Users/ArnabBiswas/Documents/Data/Kaggle Dataset/classification-data/"
     filename = "Churn_Modelling.csv"
     
     df = pd.read_csv(path+filename)    
@@ -46,9 +46,14 @@ def prepare_data_churn_model():
     y = df.iloc[:,-1].values    
     
     ''' 
-        Label encoder is for binary categorical variable i.e the fetaure that 
-        takes only two values. One hot encoding is for other categorical variables which has 
-        more than 2 different values.
+        Label Encoding is a technique that is used to convert categorical columns into numerical 
+        ones so that they can be fitted by machine learning models which only take numerical data.
+        Label encoder is used when on categorical columns have their elements 
+        in the ordinal variable category for e.g a column income level having elements as low, 
+        medium, or high in this case we can replace these elements with 1,2,3. 
+        where 1 represents ‘low’  2  ‘medium’  and 3′ high’. 
+        
+        it is a bad choice. Use onehot encoding
     '''
     le = LabelEncoder()
     x[:, 2] = le.fit_transform(x[:, 2])
@@ -143,7 +148,7 @@ def prepare_hotel_reservation_data():
 
 def prepare_wine_data():
     
-    path = "C:/Users/ArnabBiswas/Documents/Python ML/Kaggle Dataset/classification-data/"
+    path = "C:/Users/ArnabBiswas/Documents/Data/Kaggle Dataset/classification-data/"
     filename = "WineQT.csv"
     
     df = pd.read_csv(path+filename)     

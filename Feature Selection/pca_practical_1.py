@@ -38,7 +38,7 @@ scaled_data = scaler.transform(df)
 #%%
 
 # We can either choose the number of components
-pca = PCA(n_components=2)
+pca = PCA(n_components=5)
 
 # or we can choose the % variance we need to keep
 # pca = PCA(0.95)
@@ -52,7 +52,7 @@ print(x_pca.shape)
 #%%
 
 # print(pca.components_)
-print(pca.explained_variance_)
+print(pca.explained_variance_ratio_)
 #%%
 
 # Now print it
