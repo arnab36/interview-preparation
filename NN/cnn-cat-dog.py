@@ -16,7 +16,7 @@ from keras.preprocessing.image import ImageDataGenerator
 # from keras.preprocessing import image
 import keras.utils as image
 
-path = 'C:/Users/ArnabBiswas/Documents/Python ML/Kaggle Dataset/cnn-data/Cat-Dog/'
+path = 'C:/Users/ArnabBiswas/Documents/Data/Kaggle Dataset/cnn-data/Cat-Dog/'
 
 modelName = "savedModels/model-cnn-cat-dog-1.h5"
 

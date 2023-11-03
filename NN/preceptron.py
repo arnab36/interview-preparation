@@ -17,23 +17,6 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 
 
-#%%
-
-'''
-from sklearn.datasets import load_iris
-# Load Data
-
-iris = load_iris()
-print(iris.DESCR)
-
-X = iris.data
-y = iris.target
-
-print(X)
-print(y)
-'''
-
-#%%
 
 filepath = 'C:/Users/ArnabBiswas/Documents/Data/Kaggle Dataset/classification-data/'
 filename = 'Churn_Modelling.csv'
@@ -43,7 +26,6 @@ df = pd.read_csv(filepath+filename)
 X = df.drop(['Exited','RowNumber','CustomerId','Surname'],axis=1)
 y = df['Exited']
 
-#%%
 
 # Preprocessin
 
