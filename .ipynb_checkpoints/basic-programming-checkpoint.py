@@ -147,12 +147,7 @@ for j in range(1,501):
 '''
 
 
-if __name__ == '__main__':
-    n = int(input())
-    s = ''
-    for i in range(1, n):
-        s = s+str(i)
-    print(s)
+
 
 
 

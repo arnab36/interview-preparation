@@ -62,15 +62,11 @@ def permute(l):
                 perm_list.append(t)
         return perm_list
 
-
-
-perm_list = permute(l)
-
+print(permute(l))
 
 
 
 #%%
-
 
 
 
@@ -127,34 +123,36 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import mean_squared_error
 
-filePath = "../Dataset/"
-df = pd.read_csv(filePath+'Fish.csv')
+if __name__ == "__main__":
 
-species = df.Weight.unique()
+    filePath = "../../Data/Dataset/"
+    df = pd.read_csv(filePath+'Fish.csv')
 
-# df['Species'] = df['Species'].apply(species_to_numeric)
+    species = df.Weight.unique()
 
-df = df[df.columns[df.columns!='Species'] ]
+    # df['Species'] = df['Species'].apply(species_to_numeric)
 
-train, test = train_test_split(df, test_size=0.2)
+    df = df[df.columns[df.columns!='Species'] ]
 
-train_x = train[train.columns[train.columns!='Weight'] ]
-train_y = train["Weight"]
+    train, test = train_test_split(df, test_size=0.2)
 
-test_x = test[test.columns[test.columns!='Weight'] ]
-test_y = test["Weight"]
+    train_x = train[train.columns[train.columns!='Weight'] ]
+    train_y = train["Weight"]
 
-
-
-model = LinearRegression()
-model.fit(train_x, train_y)
+    test_x = test[test.columns[test.columns!='Weight'] ]
+    test_y = test["Weight"]
 
 
-y_pred= model.predict(test_x)
 
-df1 = pd.DataFrame({'Actual': test_y, 'Predicted': y_pred})
+    model = LinearRegression()
+    model.fit(train_x, train_y)
 
-mean_squared_error(test_y, y_pred)
+
+    y_pred= model.predict(test_x)
+
+    df1 = pd.DataFrame({'Actual': test_y, 'Predicted': y_pred})
+
+    print(mean_squared_error(test_y, y_pred))
 
 
 
