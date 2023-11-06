@@ -117,7 +117,7 @@ def species_to_numeric(sp):
     else:
         return 0
     
-
+#%%s
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
