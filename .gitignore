@@ -9,3 +9,4 @@ result/*
 */.pytest_cache/*
 */.idea/
 .idea/*
+*model*
